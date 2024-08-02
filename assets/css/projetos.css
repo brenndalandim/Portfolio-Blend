@@ -1,0 +1,144 @@
+.projetos h2{
+    text-align: center;
+    text-transform: uppercase;
+
+    text-decoration-line: var(--decor-line);
+    -webkit-text-decoration-line: var(--decor-line);
+    text-decoration-style: var(--decor-style);
+    -webkit-text-decoration-style: var(--decor-style);
+    text-decoration-color: var(--decor-color);
+    -webkit-text-decoration-color: var(--decor-color);
+    text-decoration-thickness: var(--decor-thick);
+    -webkit-text-decoration-thickness: var(--decor-thick);
+
+    text-underline-offset: var(--decor-offset);
+}
+
+/* section > DIV caards-container */
+
+.caards-container{
+    display: contents;
+}
+
+.caard{
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: calc(100vh/3 - 10%);
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px -1px rgba(0,0,0,0.3);
+
+    cursor: pointer;
+}
+
+.caard:nth-child(2){
+    flex-direction: row-reverse;
+}
+
+.caard .icone-clique{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 4vw;
+}
+
+.caard-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.caard a{
+    text-decoration: none;
+    color: #000;
+    font-size: clamp(1.5rem, 1vw, 2vw);
+    margin: 0;
+    font-weight: 600;
+}
+
+.caard a i{
+    font-size: clamp(1rem, 1vw, 1vw);
+    vertical-align: middle;
+}
+
+.caard a, .caard i{
+    &:hover{
+        color: #800080;
+    }
+}
+
+.caard img{
+    width: 40%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.caard img:nth-child(2){
+    object-position: 50% 50%;
+}
+
+.caard p{
+    font-size: clamp(.8rem, .9vw, 2vw);
+    margin: 0;
+    font-weight: 300;
+}
+
+.caard .techs{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: .4rem;
+}
+
+.techs li{
+    font-size: clamp(.6rem, .6vw, 1vw);
+    color: #8000809c;
+    font-weight: bold;
+}
+
+/* setion > DIV modal */
+
+.modal iframe{
+    height: 90vh;
+}
+
+/* Media Querys */
+
+@media (min-width: 992px) {
+    .caards-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .caard{
+        height: auto;
+        max-height: 70vh;
+        flex-direction: column !important;
+        width: calc(100vw / 3);
+        max-width: 350px;
+    }
+
+    .caard .icone-clique{
+        width: auto;
+        height: 4vh;
+    }
+
+    .caard img{
+        width: auto;
+        height: 60%;
+    }
+
+    .caard-body{
+        width: auto;
+        height: 40%;
+    }
+}

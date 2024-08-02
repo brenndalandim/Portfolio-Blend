@@ -1,0 +1,242 @@
+/* section > DIV sobre */
+
+.sobre h1{
+    font-size: clamp(1.8rem, 2.5vw, 3vw);
+    font-weight: 800;
+}
+
+.sobre h1 .nome{
+    color: #800080;
+    font-weight: 900;
+}
+
+.sobre p{
+    font-size: clamp(.8rem, 1vw, 2vw);
+}
+
+.sobre p .skill{
+    color: #800080;
+    font-weight: 800;
+}
+
+.sobre a{
+    font-size: clamp(.8rem, .8vw, 2vw);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #800080;
+    color: white;
+
+    transition: all .5s;
+
+    &:hover{
+        background-color: #EDEFEE;
+        color: #800080;
+        border: 1px solid #800080;
+        font-weight: 700;
+    }
+}
+
+.sobre a i{
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+
+.btn-linkedin-mobile{
+    display: inline;
+}
+
+.btn-linkedin{
+    display: none;
+}
+
+.sobre .container-btn{
+    position: relative;
+    width: fit-content;
+}
+
+.sobre .spark{
+    position: absolute;
+    z-index: -1;
+    color: #460046;
+}
+
+.spark1{
+    animation: sparkleCurto 1.9s;
+}
+
+.spark2{
+    animation: sparkleMedio 1.7s;
+}
+
+.spark3{
+    animation: sparkleLongo 1.5s;
+}
+
+
+/* section > DIV card-foto */
+
+.card-foto{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    height: 25vh;
+    width: 95vw;
+    
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px -1px rgba(0,0,0,0.3);
+}
+
+.card-foto img{
+    height: 100%;
+    width: 40%;
+
+    object-fit: cover;
+    object-position: 50% 0%;
+
+    border-radius: inherit;
+}
+
+.card-foto ul.info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.info li:first-child{
+    font-weight: bold;
+    font-size: clamp(1.2rem, 1vw, 2.1vw);
+}
+
+ul.info li:nth-child(n+2){
+    font-size: clamp(.75rem, .5vw, 1.4vw);
+    a{
+        color: #000000;
+        text-decoration: none;
+    }
+}
+
+ul.info li i{
+    color: #808080d3;
+}
+
+
+/* Seta para baixo */
+
+.seta{
+    position: relative;
+    font-weight: bold;
+    width: min-content;
+
+    animation: bounce 1s alternate infinite;
+}
+
+
+/* Animação seta para baixo */
+
+@keyframes bounce {
+    from{
+        top: 0;
+        transform: scale(1);
+    }
+
+    to{
+        top: 4rem;
+        transform: scale(2);
+    }
+}
+
+
+/* Animações botão linkedin */
+
+@keyframes sparkleCurto {
+    from{
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(-32px);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkleMedio {
+    from{
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkleLongo {
+    from{
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+}
+
+
+/* Media Querys */
+
+@media (min-width: 768px) {
+    .apresentacao{
+        gap: 4rem;
+    }
+
+    .card-foto{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        width: 20vw;
+        height: auto;
+        min-height: 350px;
+        min-width: 260px;
+
+        transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 1px 1px 5px -1px rgba(0,0,0,0.1);
+        }
+    }
+
+    .card-foto img{
+        width: 100%;
+    }
+
+    .card-foto ul.info{
+        display: block;
+    }
+
+    .seta{
+        margin-top: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .btn-linkedin-mobile{
+        display: none;
+    }
+
+    .btn-linkedin{
+        display: inline;
+    }
+}

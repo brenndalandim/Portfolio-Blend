@@ -1,0 +1,155 @@
+/* section */
+
+.contato{
+    height: calc(100vh);
+    align-items: center;
+    margin-bottom: -34px;
+}
+
+.contato h2{
+    text-align: center;
+    text-transform: uppercase;
+
+    text-decoration-line: var(--decor-line);
+    -webkit-text-decoration-line: var(--decor-line);
+    text-decoration-style: var(--decor-style);
+    -webkit-text-decoration-style: var(--decor-style);
+    text-decoration-color: var(--decor-color);
+    -webkit-text-decoration-color: var(--decor-color);
+    text-decoration-thickness: var(--decor-thick);
+    -webkit-text-decoration-thickness: var(--decor-thick);
+
+    text-underline-offset: var(--decor-offset);
+}
+
+/* section > form */
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    max-width: 550px;
+    width: 100%;
+    position: relative;
+
+    padding: 1.5rem;
+    border-radius: 1rem;
+
+    background-color: #fff;
+    box-shadow: 1px 1px 5px -1px rgba(0,0,0,0.3);
+
+    z-index: 0;
+}
+
+
+form input, form textarea{
+    border: 1px solid #0000008f;
+    padding: .5rem;
+    border-radius: 0.3rem;
+    resize: none;
+}
+
+form input:last-child{
+    width: fit-content;
+    align-self: center;
+    padding: .1rem 5rem;
+    background-color: #800080;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+}
+
+/* ... caixa de erro do input */
+
+form span{
+    background-color: #fff;
+    border: 1px solid #ff0000;
+    padding: 0.3rem;
+    padding-bottom: 0.2rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+
+    font-size: clamp(.8rem, .6vw, 1vw);
+}
+
+.msg-erro{
+    display: none;
+}
+
+form input#nome{
+    z-index: 6;
+}
+
+#erroNome{
+    position: absolute;
+    top: 37px;
+    z-index: 5;
+}
+
+form input#email{
+    z-index: 4;
+}
+
+#erroEmail{
+    position: absolute;
+    top: 95px;
+    z-index: 3;
+}
+
+form #mensagem{
+    z-index: 2;
+}
+
+#erroMensagem{
+    position: absolute;
+    bottom: 67px;
+    z-index: 1;
+}
+
+.erro{
+    border-color: #ff0000;
+}
+
+.animacao-erro{
+    animation: slideDown 5s;
+}
+
+/* Animações caixa de erro input */
+
+@keyframes erro {
+    from{
+        border-color: #ff0000;
+    }
+
+    to{
+        border-color: #ff000023;
+    }
+}
+
+@keyframes slideDown {
+    0%{
+        transform: translateY(0);
+        border-color: #ff0000
+    }
+
+    25%{
+        transform: translateY(27px);
+        border-color: #ff000023;
+    }
+
+    50%{
+        transform: translateY(27px);
+        border-color: #ff0000
+    }
+
+    75%{
+        transform: translateY(27px);
+        border-color: #ff000023;
+    }
+
+    100%{
+        transform: translateY(0);
+        border-color: #ff0000
+    }
+}
