@@ -39,9 +39,9 @@ if(isset($_POST['enviar'])){
         $mail->Body    = $body;
 
         $mail->send();
-        echo '<script>alert("Email enviado com sucesso!"); </script>';
+        echo '<script>alert("Email enviado com sucesso!"); location.href="index.html";</script>';
     } catch (Exception $e) {
-        echo `<script>alert(`Ocorreu um erro, por favor tente novamente | erro: ${$mail->ErrorInfo}`); </script>`;
+        echo `<script>alert("Ocorreu um erro, por favor tente novamente | erro: " + $mail->ErrorInfo}); location.href="index.html"; </script>`;
     }
 } else {
     echo "Erro ao enviar e-mail, acesso não foi via formulário";
