@@ -1,7 +1,8 @@
 # Portfólio Brennda Landim
 
-Disponível online ⭢ [clique aqui!](hhttps://portfoliobrenndalandim.vercel.app/)
-_Projeto ainda não conectado a um servidor, por isso o envio de formulários não é funcional, somente seu código é!_
+Disponível online ⭢ [clique aqui!](https://portfoliobrenndalandim.vercel.app/)
+> [!NOTA]
+> Projeto ainda não conectado a um servidor, por isso o envio de formulários não é funcional, somente seu código é!
 
 ## Funcionalidades
 
